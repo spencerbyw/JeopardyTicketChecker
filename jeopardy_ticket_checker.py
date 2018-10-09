@@ -2,11 +2,11 @@ import urllib.request
 
 NO_SHOWTIMES_STR = 'edit-no-showtimes'
 YES_SHOWTIMES_STR = 'js-form-item-showtimes'
-url = 'https://www.jeopardy.com/tickets'
+TICKETS_URL = 'https://www.jeopardy.com/tickets'
 
 def main():
 	try:
-		resp = urllib.request.urlopen(yup_url)
+		resp = urllib.request.urlopen(TICKETS_URL)
 		resp_content = resp.read()
 		content = resp_content.decode('utf-8')
 	except Exception as e:
